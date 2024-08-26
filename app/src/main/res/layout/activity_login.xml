@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:layout_marginTop="250dp">
+
+        <!-- 중상단에 로고와 기업명을 가로로 배치 -->
+        <LinearLayout
+            android:id="@+id/logo_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="100dp"
+            android:layout_marginTop="60dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/logo_image"
+                android:contentDescription="@string/logo_desc"/>
+
+            <TextView
+                android:id="@+id/company_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/logo_desc"
+                android:textColor="#238474"
+                android:textSize="35sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- 아이디와 패스워드 입력 창 -->
+        <LinearLayout
+            android:id="@+id/login_input_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logo_container"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editTextUsername"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/edittext_border"
+                android:hint="@string/Email"/>
+
+            <EditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="16dp"
+                android:hint="@string/Password"
+                android:background="@drawable/edittext_border"
+                android:inputType="textPassword"/>
+        </LinearLayout>
+
+        <!-- 버튼 두 개를 세로로 배치 -->
+        <LinearLayout
+            android:id="@+id/button_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/login_input_container"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
+
+            <android.widget.Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="@string/Social_login_1"
+                android:background="@drawable/social_button"
+                android:textColor="#238474"
+                />
+
+            <android.widget.Button
+                android:id="@+id/btnSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="@string/Social_login_2"
+                android:background="@drawable/social_button"
+                android:textColor="#238474"
+                android:layout_marginTop="16dp"/>
+        </LinearLayout>
+
+        <!-- 상단 버튼 크기의 반 정도 되는 두 개의 버튼을 가로로 배치 -->
+        <LinearLayout
+            android:id="@+id/extra_button_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button_container"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <android.widget.Button
+                android:id="@+id/btnForgotPassword"
+                android:layout_marginEnd="10dp"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@drawable/login_button"
+                android:text="@string/Login"
+                />
+
+            <android.widget.Button
+                android:id="@+id/btnHelp"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@drawable/register_button"
+                android:textColor="#FFFFFF"
+                android:text="@string/Register"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
