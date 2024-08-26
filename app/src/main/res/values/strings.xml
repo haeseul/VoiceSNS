@@ -12,4 +12,8 @@
     <string name="Login">Login</string>
     <string name="Register">Register</string>
 
+    <string name="Next">Next</string>
+    <string name="Id">아이디</string>
+    <string name="SetNickname">사용하실 아이디를 입력하세요</string>
+
 </resources>
