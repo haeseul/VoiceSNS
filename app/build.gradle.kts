@@ -50,4 +50,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    // Kakao SDK 추가
+    implementation("com.kakao.sdk:v2-user:2.10.0")
 }
