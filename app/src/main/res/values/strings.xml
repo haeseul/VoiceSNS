@@ -18,4 +18,10 @@
     <string name="skip_alarm">전화 알람을 안 받을래요!</string>
     <string name="Finish">Finish</string>
 
+
+    <string name="Next">Next</string>
+    <string name="Id">아이디</string>
+    <string name="SetNickname">사용하실 아이디를 입력하세요</string>
+
+
 </resources>
