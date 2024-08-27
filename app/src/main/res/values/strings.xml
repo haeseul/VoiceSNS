@@ -12,4 +12,10 @@
     <string name="Login">Login</string>
     <string name="Register">Register</string>
 
+
+    <string name="set_alarm_info">매일 특정 시간에 알람을 받고\n에코 다이어리를 작성해보세요.</string>
+    <string name="select_time_prompt">시간을 지정해주세요.</string>
+    <string name="skip_alarm">전화 알람을 안 받을래요!</string>
+    <string name="Finish">Finish</string>
+
 </resources>
