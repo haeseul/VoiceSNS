@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- BottomAppBar 스타일 정의 -->
+    <style name="BottomAppBarStyle" parent="Widget.MaterialComponents.BottomAppBar">
+        <item name="backgroundTint">@color/white</item>
+        <item name="elevation">4dp</item>
+        <item name="shapeAppearanceOverlay">@style/BottomAppBarShapeAppearance</item>
+    </style>
+
+    <!-- BottomAppBar의 모서리와 테두리 색상 -->
+    <style name="BottomAppBarShapeAppearance">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerFamilyTopLeft">cut</item>
+        <item name="cornerFamilyTopRight">cut</item>
+        <item name="cornerFamilyBottomLeft">cut</item>
+        <item name="cornerFamilyBottomRight">cut</item>
+        <item name="strokeColor">@color/mint3</item>
+        <item name="strokeWidth">10dp</item>
+    </style>
+
+    <!-- fab 모양 설정 -->
+    <style name="FabShapeAppearance">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+</resources>

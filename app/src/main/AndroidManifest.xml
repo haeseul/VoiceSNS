@@ -5,7 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name= ".GlobalApplication"
+        android:name=".GlobalApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -15,10 +15,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.VoiceSNS"
         tools:targetApi="31">
+        <activity
+            android:name=".RecordActivity"
+            android:exported="false" />
 
         <meta-data
             android:name="com.kakao.sdk.AppKey"
-            android:value="키값"/>
+            android:value="키값" />
 
         <activity
             android:name=".LoginActivity"
@@ -34,22 +37,21 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- 카카오 로그인, 인가코드를 받기 위한 액티비티 -->
-        <activity android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
+        </activity> <!-- 카카오 로그인, 인가코드를 받기 위한 액티비티 -->
+        <activity
+            android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:host="oauth"
+                <data
+                    android:host="oauth"
                     android:scheme="kakao403a2492b785640ac2a09fa6b6c537be" />
             </intent-filter>
-
         </activity>
-
     </application>
 
 </manifest>
