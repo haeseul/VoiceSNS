@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:padding="16dp"
+    tools:context=".RegisterActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -11,29 +12,8 @@
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="16dp">
 
-        <LinearLayout
-            android:id="@+id/logo_container"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/logo"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/logo_image" />
-
-            <TextView
-                android:id="@+id/company_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:text="@string/logo_desc"
-                android:textColor="@color/mint1"
-                android:textSize="35sp"
-                android:textStyle="bold" />
-        </LinearLayout>
+        <!-- logo -->
+        <include layout="@layout/top_logo"/>
 
         <!-- 시간 선택 -->
         <LinearLayout
@@ -52,7 +32,7 @@
                 android:text="@string/set_alarm_info"
                 android:textColor="@color/mint1"
                 android:layout_marginBottom="24dp"
-                android:textSize="28sp"
+                android:textSize="24sp"
                 android:textStyle="bold" />
 
             <!-- 시간 선택 뷰 (TimePicker) -->
