@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "202579304906",
+    "project_id": "echodiary-a5f48",
+    "storage_bucket": "echodiary-a5f48.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:202579304906:android:52e071b024256ccb0bef33",
+        "android_client_info": {
+          "package_name": "com.example.voicesns"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "202579304906-96pgsj4fockspnmeokunco5pu8sced7l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.voicesns",
+            "certificate_hash": "3550acf1e010976d59ff1898439517fa924e096f"
+          }
+        },
+        {
+          "client_id": "202579304906-34ikghrpbc439jtsk7h5blka1qas88md.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYlXzzx_rtVQxn_uG5NC2_QtnqADpTj3I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "202579304906-34ikghrpbc439jtsk7h5blka1qas88md.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

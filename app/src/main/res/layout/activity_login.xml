@@ -77,17 +77,18 @@
             android:layout_below="@id/login_input_container"
             android:layout_marginTop="30dp"
             android:orientation="vertical">
-
             <android.widget.Button
-                android:id="@+id/btnLogin"
+                android:id="@+id/kakao_login_button"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
+                android:layout_weight="1"
                 android:background="@drawable/social_button"
                 android:text="@string/Social_login_1"
                 android:textColor="#238474" />
 
+
             <android.widget.Button
-                android:id="@+id/btnSignUp"
+                android:id="@+id/google_button"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginTop="16dp"
@@ -106,7 +107,7 @@
             android:orientation="horizontal">
 
             <android.widget.Button
-                android:id="@+id/btnForgotPassword"
+                android:id="@+id/Login"
                 android:layout_width="0dp"
                 android:layout_height="60dp"
                 android:layout_marginEnd="10dp"
@@ -115,7 +116,7 @@
                 android:text="@string/Login" />
 
             <android.widget.Button
-                android:id="@+id/btnHelp"
+                android:id="@+id/Register"
                 android:layout_width="0dp"
                 android:layout_height="60dp"
                 android:layout_weight="1"
@@ -123,14 +124,12 @@
                 android:text="@string/Register"
                 android:textColor="#FFFFFF" />
         </LinearLayout>
-        <android.widget.Button
-            android:id="@+id/login_button"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_weight="1"
-            android:background="@drawable/register_button"
-            android:text="Test KAKAO"
-            android:textColor="#FFFFFF" />
+
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
     </RelativeLayout>
 

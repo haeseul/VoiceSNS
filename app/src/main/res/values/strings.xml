@@ -6,8 +6,8 @@
     <string name="Email">Email</string>
     <string name="Password">Password</string>
 
-    <string name="Social_login_1">Start with Google</string>
-    <string name="Social_login_2">Start with FaceBook</string>
+    <string name="Social_login_1">Start with Kakao</string>
+    <string name="Social_login_2">Start with Google</string>
     <string name="Login">Login</string>
     <string name="Register">Register</string>
 
@@ -21,6 +21,10 @@
     <string name="Next">Next</string>
     <string name="Id">아이디</string>
     <string name="SetNickname">사용하실 아이디를 입력하세요</string>
+    <string name="google_login_client_id">202579304906-34ikghrpbc439jtsk7h5blka1qas88md.apps.googleusercontent.com
+    </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

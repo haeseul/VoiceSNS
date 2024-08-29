@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.voicesns"> <!-- 패키지 이름 추가 -->
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -18,6 +19,10 @@
         <activity
             android:name=".RecordActivity"
             android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
 
         <meta-data
             android:name="com.kakao.sdk.AppKey"
