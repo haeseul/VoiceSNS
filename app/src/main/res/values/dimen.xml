@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 폰트 크기 -->
+    <dimen name="text_size_xxs">10sp</dimen>
+    <dimen name="text_size_xs">12sp</dimen>
+    <dimen name="text_size_s">14sp</dimen>
+    <dimen name="text_size_m">18sp</dimen>
+    <dimen name="text_size_l">24sp</dimen>
+    <dimen name="text_size_xl">36sp</dimen>
+    <dimen name="text_size_xxl">40sp</dimen>
+
+    <!-- 녹음 블록 크기 -->
+    <dimen name="record_block_width">248dp</dimen>
+    <dimen name="record_block_height">138dp</dimen>
+
+</resources>
