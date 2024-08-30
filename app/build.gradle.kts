@@ -55,4 +55,9 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     // Kakao SDK 추가
     implementation("com.kakao.sdk:v2-user:2.10.0")
+
+    // Retrofit
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+
 }

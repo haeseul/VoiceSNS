@@ -5,6 +5,7 @@
 
     <string name="Email">Email</string>
     <string name="Password">Password</string>
+    <string name="ConfirmPassword">Confirm Password</string>
 
     <string name="Social_login_1">Start with Google</string>
     <string name="Social_login_2">Start with FaceBook</string>
