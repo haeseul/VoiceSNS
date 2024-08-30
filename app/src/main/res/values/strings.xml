@@ -22,5 +22,9 @@
     <string name="Id">아이디</string>
     <string name="SetNickname">사용하실 아이디를 입력하세요</string>
 
+    <!-- 녹음 페이지 -->
+    <string name="record_public">전체공개</string>
+    <string name="record_private">나만보기</string>
+    <string name="new_record">새로운 녹음을 진행해보세요</string>
 
 </resources>

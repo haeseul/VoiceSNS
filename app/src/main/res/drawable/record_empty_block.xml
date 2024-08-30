@@ -1,0 +1,16 @@
+<!-- res/drawable/rounded_rectangle.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- 모서리 반지름 설정 -->
+    <corners android:radius="22dp"/>
+
+    <!-- 배경 사각형 -->
+    <solid android:color="@color/mint3_transparent_20" />
+
+    <!-- 사각형의 크기 설정 -->
+    <size
+        android:width="@dimen/record_block_width"
+        android:height="@dimen/record_block_height" />
+
+</shape>
