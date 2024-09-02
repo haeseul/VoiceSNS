@@ -12,5 +12,5 @@ data class RegisterRequest(
 
 interface ApiService {
     @POST("user")
-    fun registerUser(@Body request: RegisterRequest): Call<Void>
+    fun registerUser(@Body request: RegisterRequest): Call<Map<String, String>>
 }
