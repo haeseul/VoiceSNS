@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <application
         android:name=".GlobalApplication"
@@ -17,10 +18,13 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".record.NewRecordActivity"
+            android:exported="false" />
+        <activity
             android:name=".RegisterNicknameActivity"
             android:exported="false" />
         <activity
-            android:name=".RecordActivity"
+            android:name=".record.RecordActivity"
             android:exported="false" />
 
         <meta-data

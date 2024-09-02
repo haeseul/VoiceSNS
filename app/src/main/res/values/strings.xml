@@ -13,8 +13,8 @@
     <string name="Register">Register</string>
 
 
-    <string name="set_alarm_info">매일 특정 시간에 알람을 받고\n에코 다이어리를 작성해보세요.</string>
-    <string name="select_time_prompt">시간을 지정해주세요.</string>
+    <string name="set_alarm_info">매일 특정 시간에 알람을 받고\n에코 다이어리를 작성해보세요</string>
+    <string name="select_time_prompt">시간을 지정해주세요</string>
     <string name="skip_alarm">전화 알람을 안 받을래요!</string>
     <string name="Finish">Finish</string>
 
@@ -27,5 +27,7 @@
     <string name="record_public">전체공개</string>
     <string name="record_private">나만보기</string>
     <string name="new_record">새로운 녹음을 진행해보세요</string>
+    <string name="recording">Recording...</string>
+    <string name="recording_txt">최대 1분 30초까지 녹음이 가능합니다</string>
 
 </resources>

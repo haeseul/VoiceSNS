@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- 내비게이션 바가 반투명하도록 설정 -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+
     <!-- BottomAppBar 스타일 정의 -->
     <style name="BottomAppBarStyle" parent="Widget.MaterialComponents.BottomAppBar">
         <item name="backgroundTint">@color/white</item>
-        <item name="elevation">4dp</item>
-        <item name="shapeAppearanceOverlay">@style/BottomAppBarShapeAppearance</item>
     </style>
 
-    <!-- BottomAppBar의 모서리와 테두리 색상 -->
-    <style name="BottomAppBarShapeAppearance">
-        <item name="cornerFamily">rounded</item>
-        <item name="cornerFamilyTopLeft">cut</item>
-        <item name="cornerFamilyTopRight">cut</item>
-        <item name="cornerFamilyBottomLeft">cut</item>
-        <item name="cornerFamilyBottomRight">cut</item>
-        <item name="strokeColor">@color/mint3</item>
-        <item name="strokeWidth">10dp</item>
+    <!-- 아이콘 크기 설정 -->
+    <style name="BottomAppBarIconStyle" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemIconSize">@dimen/text_size_m</item>
     </style>
 
     <!-- fab 모양 설정 -->

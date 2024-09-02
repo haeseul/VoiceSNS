@@ -10,6 +10,9 @@
     <dimen name="text_size_xl">36sp</dimen>
     <dimen name="text_size_xxl">40sp</dimen>
 
+    <!-- 하단바 크기 -->
+    <dimen name="bottom_nav_height">120dp</dimen>
+
     <!-- 녹음 블록 크기 -->
     <dimen name="record_block_width">248dp</dimen>
     <dimen name="record_block_height">138dp</dimen>

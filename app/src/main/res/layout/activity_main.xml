@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/mint3"
     tools:context=".MainActivity">
 
     <TextView
@@ -32,5 +33,13 @@
         android:text="Go to Register"
         app:layout_constraintStart_toEndOf="@+id/button_login"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 하단바 -->
+    <fragment
+        android:id="@+id/bottomNavFragment"
+        android:name="com.example.voicesns.ui.common.BottomNavFragment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_nav_height"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

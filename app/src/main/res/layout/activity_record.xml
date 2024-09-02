@@ -5,10 +5,10 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RecordActivity">
+    tools:context=".record.RecordActivity">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/disclosure_toggle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/disclosure_bg_outline"
@@ -56,9 +56,10 @@
         android:layout_height="@dimen/record_block_height"
         android:background="@drawable/record_empty_block"
         android:layout_marginTop="20dp"
+        android:onClick="onRecordBlockClick"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        app:layout_constraintTop_toBottomOf="@+id/disclosure_toggle">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -90,6 +91,7 @@
         android:layout_height="@dimen/record_block_height"
         android:background="@drawable/record_empty_block"
         android:layout_marginTop="20dp"
+        android:onClick="onRecordBlockClick"
         app:layout_constraintTop_toBottomOf="@id/record1_block"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -124,6 +126,7 @@
         android:layout_height="@dimen/record_block_height"
         android:background="@drawable/record_empty_block"
         android:layout_marginTop="20dp"
+        android:onClick="onRecordBlockClick"
         app:layout_constraintTop_toBottomOf="@id/record2_block"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -152,10 +155,9 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!-- 하단바 -->
-    <include
-        layout="@layout/bottom_nav"
+    <FrameLayout
+        android:id="@+id/fragment_container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent" />
-
+        android:layout_height="@dimen/bottom_nav_height"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
