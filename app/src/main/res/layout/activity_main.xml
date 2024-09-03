@@ -16,6 +16,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
     <!-- 버튼 추가 -->
     <Button
@@ -41,5 +45,17 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/bottom_nav_height"
         app:layout_constraintBottom_toBottomOf="parent" />
+
+
+        <Button
+            android:id="@+id/find_friend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="go to find friend" />
+
+
+    </LinearLayout>
+    <!-- 버튼 추가 -->
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
