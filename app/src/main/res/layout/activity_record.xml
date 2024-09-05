@@ -51,24 +51,24 @@
 
     <!-- 첫 번째 record_block -->
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/record1_block"
+        android:id="@+id/record1"
         android:layout_width="@dimen/record_block_width"
         android:layout_height="@dimen/record_block_height"
         android:background="@drawable/record_empty_block"
         android:layout_marginTop="20dp"
-        android:onClick="onRecordBlockClick"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/disclosure_toggle">
 
         <LinearLayout
+            android:id="@+id/record1_block"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/record1"
+                android:id="@+id/record1_ic"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/icon_plus" />
@@ -86,24 +86,24 @@
 
     <!-- 두 번째 record_block -->
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/record2_block"
+        android:id="@+id/record2"
         android:layout_width="@dimen/record_block_width"
         android:layout_height="@dimen/record_block_height"
         android:background="@drawable/record_empty_block"
         android:layout_marginTop="20dp"
-        android:onClick="onRecordBlockClick"
-        app:layout_constraintTop_toBottomOf="@id/record1_block"
+        app:layout_constraintTop_toBottomOf="@id/record1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
         <LinearLayout
+            android:id="@+id/record2_block"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:gravity="center">
 
             <ImageView
-                android:id="@+id/record2"
+                android:id="@+id/record2_ic"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/icon_plus" />
@@ -121,24 +121,24 @@
 
     <!-- 세 번째 record_block -->
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/record3_block"
+        android:id="@+id/record3"
         android:layout_width="@dimen/record_block_width"
         android:layout_height="@dimen/record_block_height"
         android:background="@drawable/record_empty_block"
         android:layout_marginTop="20dp"
-        android:onClick="onRecordBlockClick"
-        app:layout_constraintTop_toBottomOf="@id/record2_block"
+        app:layout_constraintTop_toBottomOf="@id/record2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
         <LinearLayout
+            android:id="@+id/record3_block"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:gravity="center">
 
             <ImageView
-                android:id="@+id/record3"
+                android:id="@+id/record3_ic"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/icon_plus" />

@@ -29,6 +29,7 @@
     <string name="new_record">새로운 녹음을 진행해보세요</string>
     <string name="recording">Recording...</string>
     <string name="recording_txt">최대 1분 30초까지 녹음이 가능합니다</string>
+    <string name="record_post">Post</string>
 
     <string name="google_login_client_id">202579304906-34ikghrpbc439jtsk7h5blka1qas88md.apps.googleusercontent.com</string>
 
