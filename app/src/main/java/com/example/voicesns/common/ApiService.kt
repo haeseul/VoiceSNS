@@ -1,5 +1,7 @@
-package com.example.voicesns
+package com.example.voicesns.common
 
+import com.example.voicesns.register.Message
+import com.example.voicesns.register.User
 import com.example.voicesns.record.Record
 import retrofit2.Call
 import retrofit2.http.Body
@@ -7,16 +9,18 @@ import retrofit2.http.GET
 import retrofit2.http.POST
 import retrofit2.http.Path
 
-data class RegisterRequest(
-    val email: String,
-    val password: String,
-    val nickname: String
-)
-
 interface ApiService {
-    @POST("user")
-    fun registerUser(@Body request: RegisterRequest): Call<Map<String, String>>
 
+    // user
+    @POST("user")
+    fun postUser(@Body user: User): Call<Message>
+
+    @GET("user")
+    fun getUserSelfInfo(): Call<User>
+
+    // auth
+    @POST("auth/login")
+    fun login(@Body user: User): Call<Message>
 
     // record
     @POST("record/register")

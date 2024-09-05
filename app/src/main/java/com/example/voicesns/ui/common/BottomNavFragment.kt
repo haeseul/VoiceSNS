@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.voicesns.MainActivity
+import com.example.voicesns.ProfileActivity
 import com.example.voicesns.R
 import com.example.voicesns.record.RecordActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -39,7 +40,7 @@ class BottomNavFragment : Fragment() {
                     true
                 }
                 R.id.mypage -> {
-                    startActivity(Intent(activity, MainActivity::class.java))
+                    startActivity(Intent(activity, ProfileActivity::class.java))
                     true
                 }
                 else -> false

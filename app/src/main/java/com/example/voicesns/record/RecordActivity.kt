@@ -12,8 +12,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.voicesns.ApiService
-import com.example.voicesns.ApplicationClass
+import com.example.voicesns.common.ApiService
+import com.example.voicesns.common.ApplicationClass
 import com.example.voicesns.R
 import com.example.voicesns.databinding.ActivityRecordBinding
 import com.example.voicesns.ui.common.BottomNavFragment
@@ -43,7 +43,7 @@ class RecordActivity : AppCompatActivity() {
 
 
         // Retrofit Client 생성
-        apiService = ApplicationClass.getClient().create(ApiService::class.java)
+        apiService = ApplicationClass.getClient(context = this).create(ApiService::class.java)
 
         // 하단바 프래그먼트 동적으로 추가
         if (savedInstanceState == null) {
