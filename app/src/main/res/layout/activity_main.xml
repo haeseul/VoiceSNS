@@ -16,9 +16,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-    <LinearLayout
+    <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:columnCount="3"
         android:orientation="horizontal">
 
     <!-- 버튼 추가 -->
@@ -39,13 +40,20 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        android:id="@+id/button_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go to Profile"
+        app:layout_constraintStart_toEndOf="@+id/button_register"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
         android:id="@+id/find_friend"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="go to find friend" />
-
-
-    </LinearLayout>
+    </GridLayout>
+    <!-- 버튼 추가 -->
 
     <!-- 하단바 -->
     <fragment
@@ -54,6 +62,12 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/bottom_nav_height"
         app:layout_constraintBottom_toBottomOf="parent" />
+
+
+
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,6 +3,13 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
 }
 
+buildscript{
+    repositories{
+        google()
+        mavenCentral()
+    }
+}
+
 android {
     namespace = "com.example.voicesns"
     compileSdk = 34
@@ -62,11 +69,14 @@ dependencies {
     implementation ("com.google.android.gms:play-services-auth:20.5.0")
 
     // Retrofit
-    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation (libs.retrofit)
+    implementation (libs.converter.gson)
 
     // EncryptedSharedPreferences
-    implementation ("androidx.security:security-crypto:1.1.0-alpha03")
+    implementation (libs.androidx.security.crypto)
+
+    // jwt Decoding
+    implementation (libs.jwtdecode)
 
     // Google Play services
     implementation ("com.google.gms:google-services:4.3.15")

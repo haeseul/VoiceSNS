@@ -17,8 +17,8 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.voicesns.ApiService
-import com.example.voicesns.ApplicationClass
+import com.example.voicesns.common.ApiService
+import com.example.voicesns.common.ApplicationClass
 import com.example.voicesns.R
 import com.example.voicesns.databinding.ActivityNewRecordBinding
 import com.example.voicesns.utils.TimeUtils
@@ -66,7 +66,7 @@ class NewRecordActivity : AppCompatActivity() {
         }
 
         // Retrofit Client 생성
-        apiService = ApplicationClass.getClient().create(ApiService::class.java)
+        apiService = ApplicationClass.getClient(context = this).create(ApiService::class.java)
 
         // X 버튼 클릭 시 뒤로가기
         binding.closeButton.setOnClickListener{ onBackPressedDispatcher.onBackPressed() }

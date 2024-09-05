@@ -1,12 +1,15 @@
 package com.example.voicesns
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.voicesns.register.RegisterActivity
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,6 +30,10 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.find_friend).setOnClickListener {
             val intent = Intent(this, FindUserActivity::class.java)
+            startActivity(intent)
+        }
+        findViewById<Button>(R.id.button_profile).setOnClickListener {
+            val intent = Intent(this, ProfileActivity::class.java)
             startActivity(intent)
         }
 

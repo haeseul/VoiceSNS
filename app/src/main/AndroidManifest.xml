@@ -23,10 +23,13 @@
             android:name=".FindUserActivity"
             android:exported="false" />
         <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".record.NewRecordActivity"
             android:exported="false" />
         <activity
-            android:name=".RegisterNicknameActivity"
+            android:name=".register.RegisterNicknameActivity"
             android:exported="false" />
         <activity
             android:name=".record.RecordActivity"
@@ -43,7 +46,7 @@
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".register.RegisterActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

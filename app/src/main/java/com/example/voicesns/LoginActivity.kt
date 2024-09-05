@@ -2,8 +2,6 @@ package com.example.voicesns
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
-import android.view.View
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
@@ -16,12 +14,24 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.common.api.Scope
+import android.util.Log
+import android.view.View
+import android.widget.EditText
+import android.widget.Toast
+import com.example.voicesns.common.ApiService
+import com.example.voicesns.register.Message
+import com.example.voicesns.register.User
 import com.kakao.sdk.auth.model.OAuthToken
 import com.kakao.sdk.common.model.ClientError
 import com.kakao.sdk.common.model.ClientErrorCause
 import com.kakao.sdk.user.UserApiClient
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 import androidx.lifecycle.ViewModel
+import com.example.voicesns.common.ApplicationClass
+import com.example.voicesns.register.RegisterActivity
 
 class SignViewModel : ViewModel() {
 
@@ -59,6 +69,8 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+    private lateinit var apiService: ApiService
+
     // 카카오 로그인 콜백 설정
     private val kakaoCallback: (OAuthToken?, Throwable?) -> Unit = { token, error ->
         if (error != null) {
@@ -73,6 +85,9 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_login)
+
+        // Retrofit 인스턴스 생성
+        apiService = ApplicationClass.getClient(context = this).create(ApiService::class.java)
 
         // Google 로그인 버튼 클릭 이벤트 설정
         findViewById<View>(R.id.google_login_button).setOnClickListener {
@@ -94,6 +109,58 @@ class LoginActivity : AppCompatActivity() {
         findViewById<Button>(R.id.button_register).setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
+        }
+
+
+        // 이 부분 버튼이 안보여서 주석처리 해뒀습니다.
+        // 로그인 버튼 클릭 시 카카오톡 또는 카카오계정으로 로그인 시도
+//        findViewById<View>(R.id.login_button).setOnClickListener {
+//            if (UserApiClient.instance.isKakaoTalkLoginAvailable(this)) {
+//                // 카카오톡 로그인 시도
+//                UserApiClient.instance.loginWithKakaoTalk(this) { token, error ->
+//                    if (error != null) {
+//                        Log.e(TAG, "로그인 실패 $error")
+//                        if (error is ClientError && error.reason == ClientErrorCause.Cancelled) {
+//                            return@loginWithKakaoTalk
+//                        } else {
+//                            // 카카오계정으로 로그인
+//                            UserApiClient.instance.loginWithKakaoAccount(this, callback = callback)
+//                        }
+//                    } else if (token != null) {
+//                        Log.i(TAG, "로그인 성공 ${token.accessToken}")
+//                        GoMain()
+//                    }
+//                }
+//            } else {
+//                // 카카오계정으로 로그인
+//                UserApiClient.instance.loginWithKakaoAccount(this, callback = callback)
+//            }
+//        }
+
+        // LOGIN 버튼 클릭 시 email 기반 로그인 요청
+        findViewById<View>(R.id.button_login).setOnClickListener{
+            val user = User(email = findViewById<EditText>(R.id.editTextUsername).text.toString(),
+                password = findViewById<EditText>(R.id.editTextPassword).text.toString())
+            apiService.login(user).enqueue(object : Callback<Message> {
+                override fun onResponse(call: Call<Message>, response: Response<Message>) {
+                    if (response.isSuccessful) {
+                        Toast.makeText(this@LoginActivity, response.toString(), Toast.LENGTH_SHORT).show()
+
+                        // 로그인 이후 화면으로 이동
+                        val intent = Intent(this@LoginActivity, MainActivity::class.java)
+                        startActivity(intent)
+
+                    } else {
+                        Toast.makeText(this@LoginActivity, "로그인 실패: ${response.body()}", Toast.LENGTH_SHORT).show()
+                    }
+                }
+
+                override fun onFailure(call: Call<Message>, t: Throwable) {
+                    Toast.makeText(this@LoginActivity, "네트워크 오류: ${t.message}", Toast.LENGTH_SHORT).show()
+                    Log.d(TAG, "onFailure: ${t.message}")
+                }
+
+            })
         }
     }
 
@@ -153,5 +220,20 @@ class LoginActivity : AppCompatActivity() {
         }
         startActivity(Intent(this, MainActivity::class.java))
         finish() // 로그인 화면을 종료하여 뒤로가기 시 다시 돌아오지 않게 함
+
+        // 레이아웃의 insets를 조정하여 시스템 바에 대응
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
+    }
+
+    // 메인 화면으로 이동하는 함수
+    private fun GoMain() {
+        // 여기에 메인 화면으로 이동하는 로직을 추가하세요
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+        finish()  // 로그인 화면을 종료하여 뒤로가기 시 다시 돌아오지 않게 합니다.
     }
 }
