@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.voicesns.FindEchoActivity
 import com.example.voicesns.MainActivity
 import com.example.voicesns.ProfileActivity
 import com.example.voicesns.R
@@ -32,7 +33,7 @@ class BottomNavFragment : Fragment() {
                     true
                 }
                 R.id.search -> {
-                    startActivity(Intent(activity, MainActivity::class.java))
+                    startActivity(Intent(activity, FindEchoActivity::class.java))
                     true
                 }
                 R.id.heart -> {

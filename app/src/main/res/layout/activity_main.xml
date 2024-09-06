@@ -55,6 +55,13 @@
     </GridLayout>
     <!-- 버튼 추가 -->
 
+
+
+
+
+
+    <!-- 버튼 추가 -->
+
     <!-- 하단바 -->
     <fragment
         android:id="@+id/bottomNavFragment"

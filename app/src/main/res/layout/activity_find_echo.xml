@@ -6,17 +6,21 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FindUserActivity">
-
+    android:background="@color/mint3">
     <!-- 검색 바 -->
     <EditText
         android:id="@+id/search_bar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:autofillHints="친구 검색"
         android:hint="친구 검색"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
         android:inputType="text"
-        android:drawableStart="@android:drawable/ic_menu_search"
-        android:background="@color/cardview_light_background"
+        android:drawableEnd="@android:drawable/ic_menu_search"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:background="@color/mint2"
         android:padding="10dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,7 +32,7 @@
         android:id="@+id/user_info_section"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:visibility="visible"
+        android:visibility="gone"
         app:layout_constraintTop_toBottomOf="@id/search_bar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,10 +41,10 @@
     <!-- 프로필 사진 -->
     <ImageView
         android:id="@+id/profile_image"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_marginEnd="16dp"
-        android:src="@drawable/logo_image"
+        android:src="@drawable/ic_user_profile"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />
@@ -50,7 +54,7 @@
         android:id="@+id/user_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Aiony"
+        android:text="사용자 이름"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="@id/profile_image"
@@ -62,29 +66,34 @@
         android:id="@+id/status_message"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="1K Diaries"
+        android:text="상태 메시지"
         android:textSize="14sp"
         android:textColor="@android:color/darker_gray"
         app:layout_constraintTop_toBottomOf="@id/user_name"
         app:layout_constraintStart_toEndOf="@id/profile_image"
         app:layout_constraintEnd_toEndOf="parent" />
 
-        <Button
-            android:id="@+id/add_friend_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:backgroundTint="@color/black"
-            android:padding="10dp"
-            android:text="친구 추가"
-            android:textColor="@android:color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.9"
-            app:layout_constraintStart_toStartOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
+    <!-- 친구 추가 버튼 -->
+    <Button
+        android:id="@+id/add_friend_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="친구 추가"
+        android:backgroundTint="@color/black"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="10dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <fragment
+        android:id="@+id/bottomNavFragment"
+        android:name="com.example.voicesns.ui.common.BottomNavFragment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_nav_height"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
