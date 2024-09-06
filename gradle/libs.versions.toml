@@ -3,6 +3,7 @@ agp = "8.5.1"
 converterGson = "2.9.0"
 jacksonDatabind = "2.17.2"
 jacksonModuleKotlin = "2.14.0"
+jwt = "1.0.0"
 jwtdecode = "2.0.0"
 kotlin = "1.9.0"
 coreKtx = "1.10.1"
@@ -28,6 +29,7 @@ junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+jwt = { module = "com.auth0.android:jwt", version.ref = "jwt" }
 jwtdecode = { module = "com.auth0.android:jwtdecode", version.ref = "jwtdecode" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }

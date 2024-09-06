@@ -144,14 +144,13 @@ class LoginActivity : AppCompatActivity() {
             apiService.login(user).enqueue(object : Callback<Message> {
                 override fun onResponse(call: Call<Message>, response: Response<Message>) {
                     if (response.isSuccessful) {
-                        Toast.makeText(this@LoginActivity, response.toString(), Toast.LENGTH_SHORT).show()
 
                         // 로그인 이후 화면으로 이동
                         val intent = Intent(this@LoginActivity, MainActivity::class.java)
                         startActivity(intent)
 
                     } else {
-                        Toast.makeText(this@LoginActivity, "로그인 실패: ${response.body()}", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@LoginActivity, "로그인 실패", Toast.LENGTH_SHORT).show()
                     }
                 }
 

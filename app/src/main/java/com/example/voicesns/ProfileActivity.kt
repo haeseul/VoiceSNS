@@ -28,8 +28,9 @@ class ProfileActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         // jwt 여부 확인
-        if (!AuthUtils.checkJwtValidity(context = this)){
-            return
+        AuthUtils.checkJwtValidity(context = this){ isValid->
+            Log.d(TAG, "onCreate: isValid $isValid")
+            if (!isValid) finish()
         }
 
         enableEdgeToEdge()
@@ -60,7 +61,7 @@ class ProfileActivity : AppCompatActivity() {
 
             override fun onFailure(call: Call<User>, t: Throwable) {
                 Toast.makeText(this@ProfileActivity, "네트워크 오류: ${t.message}", Toast.LENGTH_SHORT).show()
-                Log.d(TAG, "onFailure: ${t.message}")
+                Log.e(TAG, "onFailure: ${t.message}")
             }
 
         })

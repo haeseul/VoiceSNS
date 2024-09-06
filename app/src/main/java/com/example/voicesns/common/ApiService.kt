@@ -6,6 +6,7 @@ import com.example.voicesns.record.Record
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.GET
+import retrofit2.http.Header
 import retrofit2.http.POST
 import retrofit2.http.Path
 
@@ -21,6 +22,10 @@ interface ApiService {
     // auth
     @POST("auth/login")
     fun login(@Body user: User): Call<Message>
+    @POST("auth/refresh")
+    fun refreshToken(
+        @Header("Refresh-Token") refreshToken: String
+    ): Call<Message>
 
     // record
     @POST("record/register")
