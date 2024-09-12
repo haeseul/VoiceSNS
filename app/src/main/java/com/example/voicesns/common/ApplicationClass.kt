@@ -39,10 +39,10 @@ object ApplicationClass {
             .addInterceptor(AuthInterceptor(context)) // context 전달
             .build()
 
-    val gson = GsonBuilder()
-        .registerTypeAdapter(Timestamp::class.java, TimestampTypeAdapter())
-        .registerTypeAdapter(ByteArray::class.java, ByteArrayTypeAdapter())
-        .create()
+        val gson = GsonBuilder()
+            .registerTypeAdapter(Timestamp::class.java, TimestampTypeAdapter())
+            .registerTypeAdapter(ByteArray::class.java, ByteArrayTypeAdapter())
+            .create()
 
         if (retrofit == null) {
             retrofit = Retrofit.Builder()

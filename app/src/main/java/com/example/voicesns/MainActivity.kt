@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.voicesns.register.RegisterActivity
+import com.example.voicesns.register.RegisterAlarmActivity
 
 
 class MainActivity : AppCompatActivity() {
@@ -35,6 +36,10 @@ class MainActivity : AppCompatActivity() {
         }
         findViewById<Button>(R.id.button_profile).setOnClickListener {
             val intent = Intent(this, ProfileActivity::class.java)
+            startActivity(intent)
+        }
+        findViewById<Button>(R.id.button_alarm).setOnClickListener {
+            val intent = Intent(this, RegisterAlarmActivity::class.java)
             startActivity(intent)
         }
 

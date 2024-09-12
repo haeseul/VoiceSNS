@@ -31,19 +31,19 @@ class RegisterActivity : AppCompatActivity() {
         // Next버튼 터치 시
         binding.btnNext.setOnClickListener{
             // email이 비어있는 경우
-            if (binding.editTextUsername.toString()==""){
+            if (binding.editTextUsername.text.toString().isEmpty()){
                 Toast.makeText(this, "올바른 이메일을 입력해주세요", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
             // 비밀번호가 비어있는 경우
-            if (binding.editTextPassword.toString()==""){
+            if (binding.editTextPassword.text.toString().isEmpty()){
                 Toast.makeText(this, "올바른 비밀번호를 입력해주세요", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
             // 비밀번호 확인이 비밀번호와 불일치하는 경우
-            if (binding.editTextPassword.toString()!=binding.editTextPassword.toString()){
+            if (binding.editTextPassword.text.toString()!=binding.editTextPasswordConfirm.text.toString()){
                 Toast.makeText(this, "비밀번호 확인이 일치하지 않습니다.", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }

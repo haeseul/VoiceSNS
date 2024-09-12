@@ -52,6 +52,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="go to find friend" />
+
+    <Button
+        android:id="@+id/button_alarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="set alarm" />
     </GridLayout>
     <!-- 버튼 추가 -->
 

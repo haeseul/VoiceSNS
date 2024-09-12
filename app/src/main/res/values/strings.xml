@@ -16,6 +16,8 @@
     <string name="set_alarm_info">매일 특정 시간에 알람을 받고\n에코 다이어리를 작성해보세요</string>
     <string name="select_time_prompt">시간을 지정해주세요</string>
     <string name="skip_alarm">전화 알람을 안 받을래요!</string>
+    <string name="skip_alarm_no">전화 알람을 받고싶어요!</string>
+    <string name="skip_alarm_txt">알람을 끄시면 하루의 소중한 감정을 놓칠 수 있어요.\n그래도 알람을 끄시겠어요?</string>
     <string name="Finish">Finish</string>
 
 

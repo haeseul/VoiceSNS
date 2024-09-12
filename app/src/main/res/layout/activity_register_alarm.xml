@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
+    android:id="@+id/main"
     tools:context=".register.RegisterActivity">
 
     <RelativeLayout
@@ -31,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/set_alarm_info"
                 android:textColor="@color/mint1"
-                android:layout_marginBottom="24dp"
+                android:layout_marginBottom="8dp"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -50,7 +51,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="8dp"
                 android:text="@string/select_time_prompt"
-                android:textColor="@color/mint1"
+                android:textColor="@color/gray"
                 android:textSize="18sp" />
         </LinearLayout>
 
@@ -58,9 +59,9 @@
             android:id="@+id/skip_alarm_txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
+            android:layout_above="@+id/finish_button"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="72dp"
+            android:layout_marginBottom="16dp"
             android:text="@string/skip_alarm"
             android:textColor="@color/mint1"
             android:textSize="14sp" />

@@ -39,36 +39,23 @@ class RegisterNicknameActivity : AppCompatActivity() {
         // Retrofit 인스턴스 생성
         apiService = ApplicationClass.getClient(context = this).create(ApiService::class.java)
 
+        val email = intent.getStringExtra("email")
+        val password = intent.getStringExtra("password")
+
         binding.btnNext.setOnClickListener{
-            val nickname = binding.editTextId.text.toString()
 
-            val user = User(email = intent.getStringExtra("email").toString(),
-                            password = intent.getStringExtra("password").toString(),
-                            nickname = nickname)
+            if (binding.editTextId.text.toString().isEmpty()){
+                Toast.makeText(this, "올바른 아이디를 입력해주세요", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
 
-            apiService.postUser(user).enqueue(object : Callback<Message> {
-                override fun onResponse(call: Call<Message>, response: Response<Message>) {
-                    Log.d(TAG, "onResponse: "+response)
-                    Log.d(TAG, "onResponse: "+response.body())
-                    if (response.isSuccessful) {
-                        Toast.makeText(this@RegisterNicknameActivity, response.toString(), Toast.LENGTH_SHORT).show()
+            // RegisterAlarmActivity 호출
+            val intent = Intent(this, RegisterAlarmActivity::class.java)
+            intent.putExtra("email", email)
+            intent.putExtra("password", password)
+            intent.putExtra("nickname", binding.editTextId.text.toString())
+            startActivity(intent)
 
-                        // 로그인 이후 화면으로 이동
-                        val intent = Intent(this@RegisterNicknameActivity, MainActivity::class.java)
-                        startActivity(intent)
-
-                    } else {
-                        Toast.makeText(this@RegisterNicknameActivity, "회원가입 실패: ${response.message()}", Toast.LENGTH_SHORT).show()
-                    }
-                }
-
-                override fun onFailure(call: Call<Message>, t: Throwable) {
-                    Toast.makeText(this@RegisterNicknameActivity, "네트워크 오류: ${t.message}", Toast.LENGTH_SHORT).show()
-                    Log.d(TAG, "onFailure: ${t.message}")
-                }
-
-            })
         }
-
     }
 }
